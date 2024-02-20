@@ -7,7 +7,11 @@ import appleRouter from "./routers/appleRouter";
 import noticeRouter from "./routers/noticeRouter";
 
 const corsOptions = {
-  origin: ["http://localhost:5172", "http://localhost:5173"],
+  origin: [
+    "http://localhost:5172",
+    "http://localhost:5173",
+    "http://localhost:3000",
+  ],
 };
 const PORT = process.env.PORT;
 const app = express();
