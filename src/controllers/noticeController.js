@@ -2,8 +2,8 @@ import Notice from "../models/notice";
 
 export const noticeList = async (req, res) => {
   try {
-    // await Notice.find({});
-    return res.send({ name: "list" });
+    const data = await Notice.find({});
+    return res.send({ name: "list", data });
   } catch (error) {
     console.log(error);
   }
@@ -25,6 +25,13 @@ export const noticeWrite = async (req, res) => {
     return res.send({ result: false });
   }
 };
-export const noticeDetail = (req, res) => res.send({ name: "detail" });
+export const noticeDetail = async (req, res) => {
+  try {
+    const data = await Notice.findById();
+    return res.send({ name: "detail", data });
+  } catch (errors) {
+    console.log(errors);
+  }
+};
 export const noticeEdit = (req, res) => res.send({ name: "edit" });
 export const noticeDelete = (req, res) => res.send({ name: "delete" });
