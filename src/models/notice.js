@@ -5,6 +5,7 @@ const noticeSchema = new mongoose.Schema({
   description: String,
   createdAt: Date,
   writer: String,
+  updateAt: Date,
 });
 
 const Notice = mongoose.model("Notice", noticeSchema);
