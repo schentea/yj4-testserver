@@ -77,5 +77,4 @@ export const noticeDelete = async (req, res) => {
     console.log(error);
     res.send({ result: false, error });
   }
-  res.send({ name: "delete" });
 };
